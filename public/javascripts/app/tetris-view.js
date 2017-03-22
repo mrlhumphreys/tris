@@ -1,15 +1,39 @@
-const RED = '#ff0303';
-const BLUE = '#0042ff';
-const TEAL = '#1ce6b9';
-const PURPLE = '#540081';
-const YELLOW = '#fffc01';
-const ORANGE = '#fe8a0e';
-const GREEN = '#20c000';
-const PINK = '#e55bb0';
-const GREY = '#959697';
-const LIGHT_BLUE = '#7ebff1';
-const DARK_GREEN = '#106246';
-const BROWN = '#4e2a04';
+const _100 = '#312b2b';
+const _110 = '#030708';
+const B05 = '#40c5e6';
+const B06 = '#00b3e6';
+const B14 = '#71cfeb';
+const B29 = '#0177c1';
+const B32 = '#e2eff7';
+const B39 = '#2b64a9';
+const C1 = '#dae3e8';
+const C3 = '#c1ccd2';
+const C5 = '#92a0ab';
+const C7 = '#637079';
+const C9 = '#3c474d';
+const E09 = '#d96a4f';
+const E29 = '#884636';
+const E33 = '#f3d2b1';
+const G07 = '#7bc576';
+const G17 = '#14b37d';
+const G21 = '#c4e4cd';
+const G28 = '#119462';
+const R02 = '#fdd3c7';
+const R08 = '#f26754';
+const RV11 = '#fbd6dd';
+const RV29 = '#ef4880';
+const V09 = '#8754a1';
+const W1 = '#e7e7df';
+const W3 = '#d2d2ca';
+const W5 = '#a8a9a4';
+const W7 = '#777873';
+const W9 = '#4c4d48';
+const Y11 = '#fffbcc';
+const Y13 = '#fbf7ae';
+const Y15 = '#fee96c';
+const YG03 = '#deeaaa';
+const YR04 = '#fec369';
+const YR24 = '#f0cf64';
 
 class Piece {
   constructor(colour, rotations) {
@@ -87,13 +111,7 @@ class PieceType {
   }
 }
 
-const TromrisPieceTypes = [new PieceType(RED, [[0, 1, 0], [0, 2, 0], [0, 1, 0]]), new PieceType(BLUE, [[0, 0, 0], [0, 2, 1], [0, 1, 0]])];
-
-const TetrisPieceTypes = [new PieceType(RED, [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(BLUE, [[0, 0, 0], [0, 2, 1], [0, 1, 1]]), new PieceType(TEAL, [[0, 0, 0], [1, 2, 1], [0, 1, 0]]), new PieceType(PURPLE, [[0, 0, 0], [1, 2, 1], [0, 0, 1]]), new PieceType(YELLOW, [[0, 0, 0], [1, 2, 1], [1, 0, 0]]), new PieceType(ORANGE, [[0, 0, 0], [0, 2, 1], [1, 1, 0]]), new PieceType(GREEN, [[0, 0, 0], [1, 2, 0], [0, 1, 1]])];
-
-const PentrisPieceTypes = [new PieceType(RED, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(BLUE, [[0, 1, 1], [1, 2, 0], [0, 1, 0]]), new PieceType(BLUE, [[1, 1, 0], [0, 2, 1], [0, 1, 0]]), new PieceType(TEAL, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]), new PieceType(TEAL, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 1, 1, 0, 0], [0, 0, 0, 0, 0]]), new PieceType(PURPLE, [[0, 1, 1], [0, 2, 1], [0, 1, 0]]), new PieceType(PURPLE, [[1, 1, 0], [1, 2, 0], [0, 1, 0]]), new PieceType(YELLOW, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 1, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 0]]), new PieceType(YELLOW, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 1, 2, 0, 0], [0, 1, 0, 0, 0], [0, 0, 0, 0, 0]]), new PieceType(ORANGE, [[1, 1, 1], [0, 2, 0], [0, 1, 0]]), new PieceType(GREEN, [[1, 0, 1], [1, 2, 1], [0, 0, 0]]), new PieceType(PINK, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [1, 1, 2, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]), new PieceType(GREY, [[0, 0, 1], [0, 2, 1], [1, 1, 0]]), new PieceType(LIGHT_BLUE, [[0, 1, 0], [1, 2, 1], [0, 1, 0]]), new PieceType(DARK_GREEN, [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 1, 2, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(DARK_GREEN, [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 1, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(BROWN, [[0, 1, 1], [0, 2, 0], [1, 1, 0]]), new PieceType(BROWN, [[1, 1, 0], [0, 2, 0], [0, 1, 1]])];
-
-const PieceTypes = PentrisPieceTypes;
+const PieceTypes = [new PieceType(B39, [[2]]), new PieceType(C1, [[0, 1, 0], [0, 2, 0], [0, 0, 0]]), new PieceType(C3, [[0, 1, 0], [0, 2, 0], [0, 1, 0]]), new PieceType(C5, [[0, 0, 0], [0, 2, 1], [0, 1, 0]]), new PieceType(C7, [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(C9, [[0, 0, 0], [0, 2, 1], [0, 1, 1]]), new PieceType(E09, [[0, 0, 0], [1, 2, 1], [0, 1, 0]]), new PieceType(E29, [[0, 0, 0], [1, 2, 1], [0, 0, 1]]), new PieceType(E33, [[0, 0, 0], [1, 2, 1], [1, 0, 0]]), new PieceType(G07, [[0, 0, 0], [0, 2, 1], [1, 1, 0]]), new PieceType(G17, [[0, 0, 0], [1, 2, 0], [0, 1, 1]]), new PieceType(G21, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(G28, [[0, 1, 1], [1, 2, 0], [0, 1, 0]]), new PieceType(R02, [[1, 1, 0], [0, 2, 1], [0, 1, 0]]), new PieceType(R08, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]), new PieceType(RV11, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 0, 0], [0, 1, 1, 0, 0], [0, 0, 0, 0, 0]]), new PieceType(RV29, [[0, 1, 1], [0, 2, 1], [0, 1, 0]]), new PieceType(V09, [[1, 1, 0], [1, 2, 0], [0, 1, 0]]), new PieceType(W1, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 1, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 0]]), new PieceType(W3, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 1, 2, 0, 0], [0, 1, 0, 0, 0], [0, 0, 0, 0, 0]]), new PieceType(W5, [[1, 1, 1], [0, 2, 0], [0, 1, 0]]), new PieceType(W7, [[1, 0, 1], [1, 2, 1], [0, 0, 0]]), new PieceType(W9, [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [1, 1, 2, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]), new PieceType(Y11, [[0, 0, 1], [0, 2, 1], [1, 1, 0]]), new PieceType(Y13, [[0, 1, 0], [1, 2, 1], [0, 1, 0]]), new PieceType(Y15, [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 1, 2, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(YG03, [[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 2, 1, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0]]), new PieceType(YR04, [[0, 1, 1], [0, 2, 0], [1, 1, 0]]), new PieceType(YR24, [[1, 1, 0], [0, 2, 0], [0, 1, 1]])];
 
 var randomPiece = function () {
   var pieceType = _.sample(PieceTypes);
@@ -104,6 +122,7 @@ const UP = 38;
 const DOWN = 40;
 const RIGHT = 39;
 const LEFT = 37;
+const Z = 90;
 
 class TetrisView {
   constructor(element) {
@@ -118,13 +137,18 @@ class TetrisView {
 
     $('body').keydown(event => {
       switch (event.which) {
+        case Z:
+          this.drop();
+          this.render();
+          event.preventDefault();
+          break;
         case UP:
           this.rotate();
           this.render();
           event.preventDefault();
           break;
         case DOWN:
-          this.drop();
+          this.moveDown();
           this.render();
           event.preventDefault();
           break;
@@ -189,7 +213,7 @@ class TetrisView {
   }
 
   collidesLeft() {
-    return !this.movingBlocks().some(m => {
+    return this.movingBlocks().some(m => {
       var collidesWithLeft = m.x == 0;
       var collidesWithBlocks = this.staticBlocks().some(function (s) {
         return m.y == s.y && m.x - 1 == s.x;
@@ -199,7 +223,7 @@ class TetrisView {
   }
 
   collidesRight() {
-    return !this.movingBlocks().some(m => {
+    return this.movingBlocks().some(m => {
       var collidesWithRight = m.x == this.columnCount - 1;
       var collidesWithBlocks = this.staticBlocks().some(function (s) {
         return m.y == s.y && m.x + 1 == s.x;
@@ -236,15 +260,20 @@ class TetrisView {
       });
     }));
 
-    var collision = this.staticBlocks().some(function (b) {
-      return pieceBlocks.some(function (c) {
-        return c != null && c.x == b.x && c.y == b.y;
+    var collision = pieceBlocks.some(p => {
+      return this.staticBlocks().some(s => {
+        return p != null && (p.x == s.x && p.y == s.y || p.x < 0 || p.x >= this.columnCount);
       });
     });
 
     if (collision) {
       return false;
     } else {
+      this.movingBlocks().forEach(m => {
+        var index = this.blocks.indexOf(m);
+        this.blocks.splice(index, 1);
+      });
+
       pieceBlocks.forEach(block => {
         if (block != null) {
           this.blocks.push(block);
@@ -274,9 +303,15 @@ class TetrisView {
   }
 
   moveDown() {
-    this.movingBlocks().forEach(function (b) {
-      b.y = b.y + 1;
-    });
+    if (!this.collidesBottom()) {
+      this.movingBlocks().forEach(function (b) {
+        b.y = b.y + 1;
+      });
+    } else {
+      this.stopPiece();
+      this.removeCompletedRows();
+      this.addPieceToGrid();
+    }
   }
 
   stopPiece() {
@@ -289,16 +324,11 @@ class TetrisView {
     this.currentPiece.rotate();
     var topLeft = this.currentTopLeft();
 
-    this.movingBlocks().forEach(m => {
-      var index = this.blocks.indexOf(m);
-      this.blocks.splice(index, 1);
-    });
-
     this.addRotationToGrid(topLeft.x, topLeft.y, this.currentPiece.currentRotation());
   }
 
   moveLeft() {
-    if (this.collidesLeft()) {
+    if (!this.collidesLeft()) {
       this.movingBlocks().forEach(function (b) {
         b.x = b.x - 1;
       });
@@ -306,7 +336,7 @@ class TetrisView {
   }
 
   moveRight() {
-    if (this.collidesRight()) {
+    if (!this.collidesRight()) {
       this.movingBlocks().forEach(function (b) {
         b.x = b.x + 1;
       });
@@ -384,14 +414,7 @@ class TetrisView {
 
   tick() {
     if (!this.gameOver) {
-      if (this.collidesBottom()) {
-        this.stopPiece();
-        this.removeCompletedRows();
-        this.addPieceToGrid();
-      } else {
-        this.moveDown();
-      }
-
+      this.moveDown();
       this.render();
     }
   }
@@ -439,6 +462,15 @@ class TetrisView {
       return '<div class="row">' + squares + '</div>';
     }).join('')}
           </div>
+        </div>
+        <div class="instructions">
+          <ul>
+            <li>↑: Rotate</li>
+            <li>←: Move Left</li>
+            <li>→: Move Right</li>
+            <li>↓: Move Down</li>
+            <li>z: Drop</li>
+          </ul>
         </div>
       </div>
     `;

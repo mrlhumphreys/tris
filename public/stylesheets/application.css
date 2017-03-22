@@ -2,6 +2,17 @@ body {
   background-color: #101010;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
 #tetris-view {
   width: 360px;
   margin: 2rem auto;
@@ -11,6 +22,9 @@ body {
 #tetris-view .left {
   width: 180px;
   border: solid 1px #404040;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 #tetris-view .right {
@@ -56,4 +70,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#tetris-view .instructions {
+  border: solid 1px #404040;
+  font-family: Consolas, monaco, monospace;
+  color: #e0e0e0;
+  padding: 1em;
 }
