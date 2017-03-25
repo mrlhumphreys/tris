@@ -363,7 +363,7 @@ const PieceTypes = [
       [0,1,1]
     ]
   )
-]
+];
 
 var randomPiece = function() {
   var pieceType = _.sample(PieceTypes);
@@ -381,8 +381,8 @@ class TetrisView {
     this.element = element;
     this.currentPiece = null;
     this.nextPiece = randomPiece();
-    this.rowCount = 20;
-    this.columnCount = 10;
+    this.rowCount = 24;
+    this.columnCount = 12;
     this.blocks = [];
     this.gameOver = false;
     this.score = 0;
@@ -416,6 +416,12 @@ class TetrisView {
           break;
       }
     });
+  }
+
+  setSpeed(speed) {
+    this.speed = speed;
+    clearInterval(this.interval)
+    this.interval = setInterval(() => { this.tick() }, speed);
   }
 
   message() {
@@ -656,8 +662,11 @@ class TetrisView {
 
     var scores = [0,1,2,4,8];
 
-    this.score = this.score + scores[numberOfRowsRemoved];
+    if (numberOfRowsRemoved > 0) {
+      this.score = this.score + scores[numberOfRowsRemoved];
 
+      this.setSpeed(this.speed - (this.score))
+    }
   }
 
   tick () {
@@ -733,6 +742,5 @@ $(document).ready(function() {
   tetrisView.render();
   tetrisView.addPieceToGrid();
   tetrisView.render();
-  setInterval(function() { tetrisView.tick() }, 500);
-
+  tetrisView.setSpeed(500);
 });

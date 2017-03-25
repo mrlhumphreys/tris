@@ -14,13 +14,13 @@ li {
 }
 
 #tetris-view {
-  width: 360px;
+  width: 432px;
   margin: 2rem auto;
   display: flex;
 }
 
 #tetris-view .left {
-  width: 180px;
+  width: 50%;
   border: solid 1px #404040;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ li {
 }
 
 #tetris-view .right {
-  width: 180px;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -51,10 +51,9 @@ li {
 #tetris-view .score {
   font-family: Consolas, monaco, monospace;
   text-align: center;
-  color: #e0e0e0;
+  color: #d0d0d0;
   border: solid 1px #404040;
   background-color: #101010;
-  width: 178px;
   height: 48px;
   display: flex;
   flex-direction: column;
@@ -65,7 +64,6 @@ li {
 #tetris-view .next {
   border: solid 1px #404040;
   background-color: #101010;
-  width: 178px;
   height: 178px;
   display: flex;
   justify-content: center;
@@ -75,6 +73,6 @@ li {
 #tetris-view .instructions {
   border: solid 1px #404040;
   font-family: Consolas, monaco, monospace;
-  color: #e0e0e0;
+  color: #d0d0d0;
   padding: 1em;
 }
